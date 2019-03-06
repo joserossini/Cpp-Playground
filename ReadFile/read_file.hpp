@@ -10,14 +10,14 @@
 
 void read_iterator(const std::string & name)
 {
-    std::ifstream file(name.c_str(), std::ios::binary);
-    std::string str = std::string(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
+    	std::ifstream file(name.c_str(), std::ios::binary);
+	std::string str = std::string(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
 }
 
 void read_getline(const std::string & name)
 {
-	std::string str;
-    std::ifstream file(name.c_str(), std::ios::binary);
+    	std::string str;
+    	std::ifstream file(name.c_str(), std::ios::binary);
 	std::getline(file, str, std::string::traits_type::to_char_type(std::string::traits_type::eof()));
 }
 
